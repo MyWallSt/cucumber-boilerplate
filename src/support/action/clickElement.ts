@@ -8,24 +8,20 @@ import checkIfElementExists from '../lib/checkIfElementExists';
  * @param  {String}   type    Type of the element (link or selector)
  * @param  {String}   selector Element selector
  */
-export default async (
-    action: 'click' | 'doubleClick',
-    type: 'link' | 'selector',
-    selector: Selector
-) => {
-    /**
-     * Element to perform the action on
-     * @type {String}
-     */
-    const selector2 = (type === 'link') ? `=${selector}` : selector;
+export default async (action: 'click' | 'doubleClick', type: 'link' | 'selector', selector: Selector) => {
+	/**
+	 * Element to perform the action on
+	 * @type {String}
+	 */
+	const selector2 = type === 'link' ? `=${selector}` : selector;
 
-    /**
-     * The method to call on the browser object
-     * @type {String}
-     */
-    const method = (action === 'click') ? 'click' : 'doubleClick';
+	/**
+	 * The method to call on the browser object
+	 * @type {String}
+	 */
+	const method = action === 'click' ? 'click' : 'doubleClick';
 
-    await checkIfElementExists(selector2);
+	await checkIfElementExists(selector2);
 
-    await $(selector2)[method]();
+	await $(selector2)[method]();
 };

@@ -3,11 +3,11 @@
  * @param  {String}   ms   Number of milliseconds to pause
  */
 export default async (ms: string) => {
-    /**
-     * Number of milliseconds
-     * @type {Int}
-     */
-    const intMs = parseInt(ms, 10);
+	/**
+	 * Number of milliseconds
+	 * @type {Int}
+	 */
+	const intMs = parseInt(ms, 10);
 
-    await browser.pause(intMs);
+	await browser.pause(intMs);
 };

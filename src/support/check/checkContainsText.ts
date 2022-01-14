@@ -36,10 +36,6 @@ export default async (
 	 */
 	let stringExpectedText = expectedText;
 
-	/**
-	 * The text of the element
-	 * @type {String}
-	 */
 	const elem = await $(selector);
 	await elem.waitForDisplayed();
 	const text = await elem[command]();

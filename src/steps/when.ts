@@ -15,6 +15,8 @@ import selectOptionByIndex from '../support/action/selectOptionByIndex';
 import setCookie from '../support/action/setCookie';
 import setInputField from '../support/action/setInputField';
 import setPromptText from '../support/action/setPromptText';
+import signUp from '../support/action/signUp';
+import submitStripeCard from '../support/action/submitStripeCard';
 
 When(/^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/, clickElement);
 
@@ -47,3 +49,7 @@ When(/^I select the (\d+)(st|nd|rd|th) option for element "([^"]*)?"$/, selectOp
 When(/^I select the option with the (name|value|text) "([^"]*)?" for element "([^"]*)?"$/, selectOption);
 
 When(/^I move to element "([^"]*)?"(?: with an offset of (\d+),(\d+))*$/, moveTo);
+
+When(/^I signup with random credentials$/, signUp);
+
+When(/^I subit test card into stripe form$/, submitStripeCard);

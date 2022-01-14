@@ -39,7 +39,7 @@ export default async (selector: Selector, ms: string, falseState: boolean, state
 		parsedState = state.indexOf(' ') > -1 ? state.split(/\s/)[state.split(/\s/).length - 1] : state;
 
 		if (parsedState) {
-			command = (`waitFor${parsedState[0].toUpperCase()}` + `${parsedState.slice(1)}`) as WaitForCommands;
+			command = `waitFor${parsedState[0].toUpperCase()}${parsedState.slice(1)}` as WaitForCommands;
 		}
 	}
 

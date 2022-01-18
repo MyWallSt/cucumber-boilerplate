@@ -1,5 +1,5 @@
-Feature: Log in
-    Scenario Outline: As a signed up user, I can log in and see signup info
+Feature: Log in (Non-Subscriber)
+    Scenario Outline: As a signed up user, I can log in and see subscription offer
 
         Given I open the url "/"
         When I set "<username>" to the inputfield "#username"

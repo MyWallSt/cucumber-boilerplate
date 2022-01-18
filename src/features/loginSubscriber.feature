@@ -1,5 +1,5 @@
-Feature: Log in
-    Scenario Outline: As a signed up user, I can log in
+Feature: Log in (Subscriber)
+    Scenario Outline: As a subscribed up user, I can log in
 
         Given I open the url "/"
         When I set "<username>" to the inputfield "#username"

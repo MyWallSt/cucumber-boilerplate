@@ -1,6 +1,5 @@
-Feature: Log in
-    Scenario Outline: As a signed up user, I can log in and see signup info
-
+Feature: Signup and Purchase
+    Scenario Outline: As a new user, I can signup and buy subscription
         Given I open the url "/signup"
         When I signup with random credentials
         Then I wait on element "input[type='radio']" to exist
